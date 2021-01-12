@@ -15,7 +15,9 @@ class New extends Component {
                     Author: {n.author}
                 </p>
                 <p>
-                    Web: {n.url}
+                    <a href={n.url}>
+                        <img src={n.urlToImage} alt="imagen del sitio web" width="300" height="300"/>
+                    </a>
                 </p>
             </div> 
         )

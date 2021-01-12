@@ -33,8 +33,11 @@ class App extends Component {
     return (
       <div className="container p-4">
         <div className="row">
-          <div className="col mx-auto">
+          <div className="col-md-4 mx-auto">
             <NewsForm getNoticias={this.getNoticias}/>
+          </div>
+          <div className="w-100"></div>
+          <div className="col">
             <News miState= {this.state}/>
           </div>
         </div>
