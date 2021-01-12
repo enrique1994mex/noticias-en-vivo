@@ -1,8 +1,12 @@
 import React, {Component} from 'react';
 import NewsForm from './components/NewsForm';
+import News from './components/News';
 import {Noticias_key} from './keys'; 
 
 class App extends Component {
+
+  state = null; 
+ 
 
   getNoticias = async e => {
     e.preventDefault(); 
@@ -15,15 +19,27 @@ class App extends Component {
       const data = await response.json(); 
       const {articles} = data;
       
-      console.log(articles); 
+      console.log(this.state);
+      console.log(this.state != null);  
+      this.setState({articles});
+      console.log(this.state); 
+      console.log(this.state.articles);
+      console.log(this.state != null);
+      console.log(this.state.articles.length > 0);   
     } 
   }
 
   render() {
     return (
-      <NewsForm getNoticias={this.getNoticias}/>
-
-    )
+      <div className="container p-4">
+        <div className="row">
+          <div className="col mx-auto">
+            <NewsForm getNoticias={this.getNoticias}/>
+            <News miState= {this.state}/>
+          </div>
+        </div>
+      </div>
+    )        
   }
 }
 
