@@ -7,8 +7,8 @@ class News extends Component {
             <div className="row">
                 {this.props.miState != null
                 ? ( this.props.miState.articles.map ( (k,index) =>
-                    <div className="col-md-4">
-                        <New n={k} key={index}/>
+                    <div className="col-md-4" key={index}>
+                        <New n={k}/>
                     </div>
             
                     )

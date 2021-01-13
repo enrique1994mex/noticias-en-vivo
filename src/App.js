@@ -20,12 +20,9 @@ class App extends Component {
       const {articles} = data;
       
       console.log(this.state);
-      console.log(this.state != null);  
       this.setState({articles});
       console.log(this.state); 
       console.log(this.state.articles);
-      console.log(this.state != null);
-      console.log(this.state.articles.length > 0);   
     } 
   }
 
@@ -37,9 +34,8 @@ class App extends Component {
             <NewsForm getNoticias={this.getNoticias}/>
           </div>
           <div className="w-100"></div>
-          <div className="col">
-            <News miState= {this.state}/>
-          </div>
+          <News miState= {this.state}/>
+          
         </div>
       </div>
     )        
