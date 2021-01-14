@@ -15,7 +15,9 @@ class News extends Component {
                 )
                 : (
                     <div className="col-md-4 mx-auto">
-                        <p> Not request yet</p>
+                        <div className="card card-body">
+                            <p> Not request yet</p>
+                        </div>
                     </div>
                 )}
             </div>

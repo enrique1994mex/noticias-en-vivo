@@ -3,9 +3,9 @@ import React, {Component} from 'react';
 class NewsForm extends Component {
     render() {
       return (
-        <div className="card card-body">
+        <div className="card card-body mb-3">
             <form onSubmit={this.props.getNoticias}>
-                <div className="form-group">
+                <div className="form-group mb-3">
                     <input type="text" name="country" placeholder="Your country name" 
                     className="form-control" autoFocus/>
                 </div>

@@ -33,7 +33,6 @@ class App extends Component {
           <div className="col-md-4 mx-auto">
             <NewsForm getNoticias={this.getNoticias}/>
           </div>
-          <div className="w-100"></div>
           <News miState= {this.state}/>
           
         </div>

@@ -4,31 +4,34 @@ class New extends Component {
     render () {
         const {n} = this.props; 
         return (
-            <div className="card card-body" style={styleCard}>
-                <p1 className="card-title">
-                    Title: {n.title}
-                </p1>
+            <div className="card overflow-hidden" style={styleCard }>
+                <div className="card-body">
+                <p className="card-title">
+                    <b>Title:</b> {n.title}
+                </p>
                 <p className="card-text">
-                    Description: {n.description} 
+                    <b>Description:</b> {n.description} 
                 </p>
                 <p className="card-subtitle">
-                    Author: {n.author}
+                    <b>Author:</b> {n.author}
                 </p>
-                <p>
-                    <a href={n.url}>
-                        <img src={n.urlToImage} alt="imagen del sitio web" width="300" height="300" className="card-img-bottom"/>
-                    </a>
-                </p>
-            </div> 
-        )
+                </div>
+                <a href={n.url} target="_blank">
+                    <img src={n.urlToImage} alt="imagen del sitio web" className="card-img-top" style={styleImg}/>
+                </a>
+            </div>
+        ); 
     }
 }
 
 const styleCard = {
     textAlign: 'justify',
-    padding: '10px 10px',
     borderRadius: '20px',
-    height: '600px'
+    height: '500px',
+    margin: '10px 2px' 
 }
 
+const styleImg = {
+    height: '200px'
+}
 export default New; 
