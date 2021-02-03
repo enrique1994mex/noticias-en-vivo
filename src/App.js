@@ -5,9 +5,8 @@ import {Noticias_key} from './keys';
 
 class App extends Component {
 
-  state = null; 
+  state = {articles: null}; 
  
-
   getNoticias = async e => {
     e.preventDefault(); 
     const {country} = e.target.elements;
@@ -19,18 +18,21 @@ class App extends Component {
       const data = await response.json(); 
       const {articles} = data;
       
-      console.log(this.state);
-      this.setState({articles});
-      console.log(this.state); 
-      console.log(this.state.articles);
+      this.setState({articles: articles});
+    } else {
+      this.setState({articles: countryValue});
+      console.log(this.state);  
     } 
-  }
+  } 
 
   render() {
     return (
       <div className="container p-4">
         <div className="row">
           <div className="col-md-4 mx-auto">
+            <div className="card card-body bg-success mb-3 text-info text-center">
+                <h1 className="card-title">Live news</h1>
+            </div>
             <NewsForm getNoticias={this.getNoticias}/>
           </div>
           <News miState= {this.state}/>
