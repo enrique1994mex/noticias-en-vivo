@@ -13,15 +13,15 @@ class App extends Component {
     const countryValue = country.value;
     
     if (countryValue) {
-      const Api_url = `http://newsapi.org/v2/top-headlines?country=${countryValue}&apiKey=${Noticias_key}`;
+      const Api_url = `http://api.mediastack.com/v1/news?access_key=${Noticias_key}&countries=${countryValue}`;
       const response = await fetch(Api_url);
-      const data = await response.json(); 
-      const {articles} = data;
+      const datas = await response.json();
+      console.log(datas); 
+      const {data} = datas;
       
-      this.setState({articles: articles});
+      this.setState({articles: data});
     } else {
       this.setState({articles: countryValue});
-      console.log(this.state);  
     } 
   } 
 

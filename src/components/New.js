@@ -5,8 +5,8 @@ class New extends Component {
         const {n} = this.props; 
         return (
             <div className="card overflow-hidden border-0" style={styleCard }>
-                <a href={n.url} target="_blank">
-                    <img src={n.urlToImage} alt="imagen del sitio web" className="card-img-top" style={styleImg}/>
+                <a href={n.url} target="_blank" rel="noreferrer">
+                    <img src={n.image} alt="imagen ilustrativa" className="card-img-top" style={styleImg}/>
                 </a>
                 <div className="card-body">
                     <p className="card-title">
@@ -18,6 +18,7 @@ class New extends Component {
                     <p className="card-subtitle">
                         <b>Author:</b> {n.author}
                     </p>
+                    <a href={n.url} className="btn btn-primary">Go site</a>
                 </div>
             </div>
         ); 

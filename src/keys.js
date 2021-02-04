@@ -1,3 +1,3 @@
 module.exports = {
-    Noticias_key: `b60247fdac2d45ad9f54b110b266e0bf`
+    Noticias_key: `69f201b6a38ad34c31763ac55ebb97c2`
 }
