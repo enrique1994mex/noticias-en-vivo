@@ -16,7 +16,6 @@ class App extends Component {
       const Api_url = `http://api.mediastack.com/v1/news?access_key=${Noticias_key}&countries=${countryValue}`;
       const response = await fetch(Api_url);
       const datas = await response.json();
-      console.log(datas); 
       const {data} = datas;
       
       this.setState({articles: data});
