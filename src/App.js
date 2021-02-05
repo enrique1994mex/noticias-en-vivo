@@ -13,7 +13,8 @@ class App extends Component {
     const countryValue = country.value;
     
     if (countryValue) {
-      const Api_url = `http://api.mediastack.com/v1/news?access_key=${Noticias_key}&countries=${countryValue}`;
+      const corsProxy = "https://cors-anywhere.herokuapp.com/";
+      const Api_url = `${corsProxy}http://api.mediastack.com/v1/news?access_key=${Noticias_key}&countries=${countryValue}`;
       const response = await fetch(Api_url);
       const datas = await response.json();
       const {data} = datas;
